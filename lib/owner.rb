@@ -28,7 +28,7 @@ def buy_cat(name)
   cat.new(name, self)
 end
 
-def buy_dof(name)
+def buy_dog(name)
   dog.new(name, self)
 end
 
