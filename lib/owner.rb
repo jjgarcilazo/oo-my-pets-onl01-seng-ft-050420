@@ -23,7 +23,7 @@ def self.count
 end
 
 def say_species
-  "Iam a#{self.species}."
+  "I am a#{self.species}."
 end
 
 def buy_cat(name)
