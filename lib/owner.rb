@@ -1,19 +1,19 @@
 class Owner
   attr_accessor :cats, :dogs
   attr_reader :species, :name
-  
+
 @@all= []
   # Instance Methods #
   def initialize(name)
-    @name = name 
+    @name = name
     @species = "human"
     @@all << self
     @cats = []
     @dogs = []
   end
 
-def self.all 
-  @@all 
+def self.all
+  @@all
 end
 
 def self.count
@@ -48,10 +48,10 @@ def sell_pets
 end
 self.dogs.each do |dog|
   self.dogs.delete(dog)
-  dog.owner = nil 
+  dog.owner = nil
   dog.mood = "nervous"
  end
-end   
+end
 
   def list_pets
     number_of_dogs = self.dogs.count
