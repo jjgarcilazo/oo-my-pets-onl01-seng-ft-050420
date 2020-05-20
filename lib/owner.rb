@@ -1,5 +1,3 @@
-
-
 class Owner
   attr_accessor :cats, :dogs
   attr_reader :species, :name
@@ -60,8 +58,9 @@ end
     number_of_cats = self.cats.count
 
     "I have #{number_of_dogs} dog(s), and #{number_of_cats} cat(s)."
+  end
+  
     def self.reset_all
         self.all.clear
-      end
     end
-end
+  end
