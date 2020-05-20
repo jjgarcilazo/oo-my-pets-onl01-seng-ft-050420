@@ -10,7 +10,7 @@ class Owner
   def initialize(species)
     @species = species
     @@all << self
-    @pets = {:fishes => [], :dogs => [], :cats => []}
+    @pets = { :dogs => [], :cats => []}
   end
 
   def say_species
@@ -19,9 +19,7 @@ class Owner
 
   # Pets #
 
-  def buy_fish(name_of_fish)
-    @pets[:fishes] << Fish.new(name_of_fish)
-  end
+
 
   def buy_dog(name_of_dog)
     @pets[:dogs] << Dog.new(name_of_dog)
@@ -51,15 +49,7 @@ class Owner
     end
   end
 
-  def feed_fish
-    @pets.collect do |species, instances|
-      if species == :fishes
-        instances.each do |fish|
-          fish.mood = "happy"
-        end
-      end
-    end
-  end
+
 
   def sell_pets
     @pets.collect do |species, instances|
@@ -73,8 +63,7 @@ class Owner
   def list_pets
     num_dogs = @pets[:dogs].size
     num_cats = @pets[:cats].size
-    num_fish = @pets[:fishes].size
-    return "I have #{num_fish} fish, #{num_dogs} dog(s), and #{num_cats} cat(s)."
+    return "I have  #{num_dogs} dog(s), and #{num_cats} cat(s)."
   end
 
   # Class Methods #
