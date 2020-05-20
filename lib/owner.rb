@@ -1,4 +1,4 @@
-require'pry'
+
 
 class Owner
   attr_accessor :cats, :dogs
@@ -61,3 +61,4 @@ end
 
     "I have #{number_of_dogs} dog(s), and #{number_of_cats} cat(s)."
   end
+end
