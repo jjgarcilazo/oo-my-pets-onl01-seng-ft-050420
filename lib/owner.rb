@@ -25,7 +25,7 @@ def say_species
 end
 
 def buy_cat(name)
-  cat.new(name, self)
+  cats.new(name, self)
 end
 
 def buy_dog(name)
