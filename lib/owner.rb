@@ -24,13 +24,13 @@ def say_species
   "I am a #{self.species}."
 end
 
-def buy_cat(name)
-  cat.new(name, self)
-end
+def buy_dog(name_of_dog)
+    @pets[:dogs] << Dog.new(name_of_dog)
+  end
 
-def buy_dog(name)
-  dog.new(name, self)
-end
+  def buy_cat(name_of_cat)
+    @pets[:cats] << Cat.new(name_of_cat)
+  end
 
 def walk_dogs
   self.dogs.each {|dog| dog.mood = "happy"}
